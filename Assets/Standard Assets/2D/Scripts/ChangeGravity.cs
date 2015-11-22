@@ -3,28 +3,30 @@ using System.Collections;
 
 public class ChangeGravity : MonoBehaviour {
 
-    public GameObject target;
     public float gravity;
-    private Rigidbody2D playerRB;
+    private GameObject player;
+    bool pickup;
 
-    void OnTriggerEnter2D(Collider2D coll)
+    void OnTriggerStay2D(Collider2D coll)
     {
         if (coll.gameObject.tag == "Player")
         {
-            playerRB = target.GetComponent<Rigidbody2D>();
-            playerRB.gravityScale = gravity;
-            Destroy(this.gameObject);
-            Debug.Log("gravity changed to: " + gravity);
+            if (pickup)
+            {
+                player.GetComponent<Rigidbody2D>().gravityScale = gravity;
+                Destroy(this.gameObject);
+                Debug.Log("gravity changed to: " + gravity);
+            }
         }
             
     }
     // Use this for initialization
     void Start () {
-	
+        player = GameObject.Find("Player");
 	}
 	
 	// Update is called once per frame
-	void Update () {
-
-	}
+	void FixedUpdate () {
+        pickup = Input.GetButton("Pickup");
+    }
 }

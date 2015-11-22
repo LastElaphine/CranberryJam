@@ -26,6 +26,5 @@ public class Key : MonoBehaviour {
 	// Update is called once per frame
 	void FixedUpdate () {
         pickup = Input.GetButton("Pickup");
-        Debug.Log(pickup);
     }
 }
