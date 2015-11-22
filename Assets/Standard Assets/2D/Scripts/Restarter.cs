@@ -9,8 +9,8 @@ namespace UnityStandardAssets._2D
         {
             if (other.tag == "Player")
             {
-                Application.LoadLevel(Application.loadedLevelName);
                 GameObject.Find("PersistantDataSource").GetComponent<PersistantData>().restartFlag = true;
+                Application.LoadLevel(Application.loadedLevelName);
             }
         }
     }

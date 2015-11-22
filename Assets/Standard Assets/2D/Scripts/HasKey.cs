@@ -14,9 +14,11 @@ public class HasKey : MonoBehaviour {
             if (keyObtained)
             {
                 Persistant = GameObject.Find("PersistantDataSource");
-                Persistant.GetComponent<PersistantData>().currentLevel++;
                 Persistant.GetComponent<PersistantData>().restartFlag = false;
-                Application.LoadLevel(Persistant.GetComponent<PersistantData>().currentLevel);
+                Debug.Log(Persistant.GetComponent<PersistantData>().currentLevel);
+                keyObtained = false;
+                int level = Application.loadedLevel + 1;
+                Application.LoadLevel(level);
             }
         }
         

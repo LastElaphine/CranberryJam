@@ -14,7 +14,9 @@ public class ChangeGravity : MonoBehaviour {
             if (pickup)
             {
                 player.GetComponent<Rigidbody2D>().gravityScale = gravity;
-                Destroy(this.gameObject);
+                this.GetComponent<AudioSource>().Play();
+                Destroy(this.gameObject.GetComponent<BoxCollider2D>());
+                Destroy(this.gameObject.GetComponent<SpriteRenderer>());
                 Debug.Log("gravity changed to: " + gravity);
             }
         }
