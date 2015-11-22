@@ -5,6 +5,7 @@ public class SpikeBall : MonoBehaviour {
 
     public float velocity;
     public float rotationVal;
+    private bool dir = true;
     void OnCollisionEnter2D(Collision2D coll)
     {
         if(coll.gameObject.tag == "Player")
@@ -13,13 +14,18 @@ public class SpikeBall : MonoBehaviour {
         }
         if(coll.gameObject.tag == "Wall")
         {
-            if(GetComponent<Rigidbody2D>().velocity.x >= 0)
+            Debug.Log(GetComponent<Rigidbody2D>().velocity.x);
+            if (dir)
             {
-                GetComponent<Rigidbody2D>().velocity = Vector2.left * velocity;
-            } else
-            {
-                GetComponent<Rigidbody2D>().velocity = Vector2.right * velocity;
+                GetComponent<Rigidbody2D>().velocity = new Vector2(-velocity, 0);
+                dir = false;
             }
+            else
+            {
+                GetComponent<Rigidbody2D>().velocity = new Vector2(velocity, 0);
+                dir = true;
+            }
+            Debug.Log(GetComponent<Rigidbody2D>().velocity.x);
             rotationVal *= -1;
         }
     }
