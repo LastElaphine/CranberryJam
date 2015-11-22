@@ -18,8 +18,11 @@ public class PersistantData : MonoBehaviour {
         if (level <= 4)
         {
             player = GameObject.Find("Player");
-            music = GameObject.Find("Audio Source");
+            music = GameObject.Find("EarthTheme");
+            Debug.Log(music);
             music.GetComponent<AudioSource>().time = musicTime;
+            music.GetComponent<AudioSource>().Play();
+            GameObject.Find("Door").GetComponent<AudioSource>().Play();
             if (restartFlag == false)
                 player.GetComponent<Rigidbody2D>().gravityScale = Pgravity;
         }

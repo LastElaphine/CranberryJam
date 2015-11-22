@@ -10,8 +10,12 @@ public class Key : MonoBehaviour {
         {
             if (pickup)
             {
+
                 door.GetComponent<HasKey>().keyObtained = true;
-                Destroy(this.gameObject);
+                this.GetComponent<AudioSource>().Play();
+                Destroy(this.gameObject.GetComponent<BoxCollider2D>());
+                Destroy(this.gameObject.GetComponent<SpriteRenderer>());
+                //Destroy(this.gameObject);
                 Debug.Log("Key Obtained");
             }
         }

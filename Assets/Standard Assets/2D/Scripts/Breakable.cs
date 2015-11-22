@@ -11,7 +11,9 @@ public class Breakable : MonoBehaviour {
         {
             if (GravReq <= coll.gameObject.GetComponent<Rigidbody2D>().gravityScale)
             {
-                Destroy(this.gameObject);
+                this.GetComponent<AudioSource>().Play();
+                Destroy(this.gameObject.GetComponent<BoxCollider2D>());
+                Destroy(this.gameObject.GetComponent<SpriteRenderer>());
                 Debug.Log("Breakable Object destoryed.");
             }
         }

@@ -46,6 +46,7 @@ namespace UnityStandardAssets._2D
 
             // Set the vertical animation
             m_Anim.SetFloat("vSpeed", m_Rigidbody2D.velocity.y);
+            
         }
 
 
@@ -96,6 +97,14 @@ namespace UnityStandardAssets._2D
                 m_Grounded = false;
                 m_Anim.SetBool("Ground", false);
                 m_Rigidbody2D.AddForce(new Vector2(0f, m_JumpForce));
+            }
+            // Audio
+            if ((move != 0) && m_Grounded == true)
+            {
+                GameObject.Find("RunningFX").GetComponent<AudioSource>().mute = false;
+            } else
+            {
+                GameObject.Find("RunningFX").GetComponent<AudioSource>().mute = true;
             }
         }
 
