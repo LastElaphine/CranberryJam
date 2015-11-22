@@ -80,12 +80,14 @@
     <Compile Include="Assets\Standard Assets\2D\Scripts\LevelManager.cs" />
     <Compile Include="Assets\Standard Assets\2D\Scripts\Parallaxing.cs" />
     <Compile Include="Assets\Standard Assets\2D\Scripts\PauseMenu.cs" />
+    <Compile Include="Assets\Standard Assets\2D\Scripts\PersistantData.cs" />
     <Compile Include="Assets\Standard Assets\2D\Scripts\Platformer2DUserControl.cs" />
     <Compile Include="Assets\Standard Assets\2D\Scripts\PlatformerCharacter2D.cs" />
     <Compile Include="Assets\Standard Assets\2D\Scripts\PlayerCommands.cs" />
     <Compile Include="Assets\Standard Assets\2D\Scripts\Restarter.cs" />
     <Compile Include="Assets\Standard Assets\2D\Scripts\Rotate.cs" />
     <Compile Include="Assets\Standard Assets\2D\Scripts\SpikeBall.cs" />
+    <Compile Include="Assets\Standard Assets\2D\Scripts\StoreAudio.cs" />
     <Compile Include="Assets\Standard Assets\CrossPlatformInput\Scripts\AxisTouchButton.cs" />
     <Compile Include="Assets\Standard Assets\CrossPlatformInput\Scripts\ButtonHandler.cs" />
     <Compile Include="Assets\Standard Assets\CrossPlatformInput\Scripts\CrossPlatformInputManager.cs" />
