@@ -51,17 +51,11 @@
     <Reference Include="UnityEngine">
       <HintPath>Library\UnityAssemblies\UnityEngine.dll</HintPath>
     </Reference>
-    <Reference Include="UnityEngine.Advertisements">
-      <HintPath>Library\UnityAssemblies\UnityEngine.Advertisements.dll</HintPath>
-    </Reference>
     <Reference Include="UnityEngine.UI">
       <HintPath>Library\UnityAssemblies\UnityEngine.UI.dll</HintPath>
     </Reference>
     <Reference Include="UnityEngine.Networking">
       <HintPath>Library\UnityAssemblies\UnityEngine.Networking.dll</HintPath>
-    </Reference>
-    <Reference Include="UnityEngine.Analytics">
-      <HintPath>Library\UnityAssemblies\UnityEngine.Analytics.dll</HintPath>
     </Reference>
     <Reference Include="UnityEditor">
       <HintPath>Library\UnityAssemblies\UnityEditor.dll</HintPath>
@@ -77,15 +71,20 @@
     <Compile Include="Assets\Standard Assets\2D\Scripts\Breakable.cs" />
     <Compile Include="Assets\Standard Assets\2D\Scripts\Camera2DFollow.cs" />
     <Compile Include="Assets\Standard Assets\2D\Scripts\CameraFollow.cs" />
+    <Compile Include="Assets\Standard Assets\2D\Scripts\CameraOverview.cs" />
     <Compile Include="Assets\Standard Assets\2D\Scripts\ChangeGravity.cs" />
     <Compile Include="Assets\Standard Assets\2D\Scripts\EnableGravity.cs" />
     <Compile Include="Assets\Standard Assets\2D\Scripts\Fan.cs" />
     <Compile Include="Assets\Standard Assets\2D\Scripts\HasKey.cs" />
     <Compile Include="Assets\Standard Assets\2D\Scripts\Key.cs" />
+    <Compile Include="Assets\Standard Assets\2D\Scripts\LevelManager.cs" />
+    <Compile Include="Assets\Standard Assets\2D\Scripts\Parallaxing.cs" />
+    <Compile Include="Assets\Standard Assets\2D\Scripts\PauseMenu.cs" />
     <Compile Include="Assets\Standard Assets\2D\Scripts\Platformer2DUserControl.cs" />
     <Compile Include="Assets\Standard Assets\2D\Scripts\PlatformerCharacter2D.cs" />
     <Compile Include="Assets\Standard Assets\2D\Scripts\PlayerCommands.cs" />
     <Compile Include="Assets\Standard Assets\2D\Scripts\Restarter.cs" />
+    <Compile Include="Assets\Standard Assets\2D\Scripts\Rotate.cs" />
     <Compile Include="Assets\Standard Assets\2D\Scripts\SpikeBall.cs" />
     <Compile Include="Assets\Standard Assets\CrossPlatformInput\Scripts\AxisTouchButton.cs" />
     <Compile Include="Assets\Standard Assets\CrossPlatformInput\Scripts\ButtonHandler.cs" />
