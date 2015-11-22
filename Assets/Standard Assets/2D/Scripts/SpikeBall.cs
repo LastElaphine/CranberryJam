@@ -5,21 +5,28 @@ public class SpikeBall : MonoBehaviour {
 
     public float velocity;
     public float rotationVal;
+    //private bool dir = true;
     void OnCollisionEnter2D(Collision2D coll)
     {
+        var contacts = coll.contacts[0];
         if(coll.gameObject.tag == "Player")
         {
             Application.LoadLevel(Application.loadedLevelName);
         }
         if(coll.gameObject.tag == "Wall")
         {
-            if(GetComponent<Rigidbody2D>().velocity.x >= 0)
+            Debug.Log(GetComponent<Rigidbody2D>().velocity.x);
+            if (contacts.point.x < GetComponent<Transform>().position.x)
             {
-                GetComponent<Rigidbody2D>().velocity = Vector2.left * velocity;
-            } else
-            {
-                GetComponent<Rigidbody2D>().velocity = Vector2.right * velocity;
+                GetComponent<Rigidbody2D>().velocity = new Vector2(velocity, 0);
+                //dir = false;
             }
+            else
+            {
+                GetComponent<Rigidbody2D>().velocity = new Vector2(-velocity, 0);
+                //dir = true;
+            }
+            Debug.Log(GetComponent<Rigidbody2D>().velocity.x);
             rotationVal *= -1;
         }
     }
