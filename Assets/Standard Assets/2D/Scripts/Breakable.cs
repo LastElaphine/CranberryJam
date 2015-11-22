@@ -7,10 +7,8 @@ public class Breakable : MonoBehaviour {
 
     void OnCollisionEnter2D(Collision2D coll)
     {
-        Debug.Log(coll.gameObject.tag);
         if (coll.gameObject.tag == "Player" || coll.gameObject.tag == "Boulder")
         {
-            Debug.Log("Breakable Object: " + coll.gameObject.GetComponent<Rigidbody2D>().gravityScale);
             if (GravReq <= coll.gameObject.GetComponent<Rigidbody2D>().gravityScale)
             {
                 Destroy(this.gameObject);
